@@ -34,8 +34,9 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -3, 0 )
 tile_set = SubResource( 2 )
+cell_size = Vector2( 48, 48 )
 format = 1
 tile_data = PoolIntArray( 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0 )
 
 [node name="Player0" parent="." instance=ExtResource( 2 )]
-position = Vector2( 163, 306 )
+position = Vector2( 163, 79 )
