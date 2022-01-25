@@ -10,7 +10,6 @@ script/source = "extends Actor
 extents = Vector2( 7.5, 9.5 )
 
 [node name="Player0" type="KinematicBody2D"]
-position = Vector2( 7, 19 )
 script = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
