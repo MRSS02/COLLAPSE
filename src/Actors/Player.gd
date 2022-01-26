@@ -16,10 +16,10 @@ func _physics_process(delta: float) -> void:
 	var direction: = get_direction() 
 	velocity.x = (maxspeed.x) * direction.x * orientation
 	velocity.y += (maxspeed.y) * direction.y
-	print(direction.x, is_on_floor()) 
+	#print(direction.x, is_on_floor()) 
 	velocity = move_and_slide(velocity)
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
-		print(collision.collider.name)
+		#print(collision.collider.name)
 		if collision.collider.name == "Swapper":
 			 set_orientation(-orientation)

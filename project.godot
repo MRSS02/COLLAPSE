@@ -36,6 +36,11 @@ config/name="COLLAPSE"
 run/main_scene="res://src/Levels/level0.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1280
+window/size/height=720
+
 [gdnative]
 
 singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
