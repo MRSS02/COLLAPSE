@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/tilesets/ground.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player0.tscn" type="PackedScene" id=2]
@@ -6,14 +6,11 @@
 [ext_resource path="res://assets/tilesets/bg.png" type="Texture" id=4]
 [ext_resource path="res://src/Items/minus_item.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Items/plus_item.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/sprites/tileset_0.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/tileset_2.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/tileset_1.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/street_0.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/street_2.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/street_1.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/street_3.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/tiles_iguess.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/tileset_5.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/tileset_6.png" type="Texture" id=14]
-[ext_resource path="res://assets/sprites/tileset_4.png" type="Texture" id=15]
-[ext_resource path="res://assets/sprites/street_0-export.png" type="Texture" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
@@ -68,50 +65,14 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 position = Vector2( 1, 1 )
 
 [node name="Bg" type="Sprite" parent="."]
-position = Vector2( 652, 296 )
+position = Vector2( 672, 357 )
 scale = Vector2( 1.02488, 1.03167 )
 texture = ExtResource( 4 )
-
-[node name="Street0-export" type="Sprite" parent="Bg"]
-position = Vector2( -401.023, 29.0791 )
-scale = Vector2( 0.975724, 0.969302 )
-texture = ExtResource( 16 )
-offset = Vector2( -59, -50 )
-
-[node name="Street0-export" type="Sprite" parent="Bg/Street0-export"]
-position = Vector2( 175, 1 )
-texture = ExtResource( 16 )
-offset = Vector2( -59, -50 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bg"]
 z_index = 4
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bg/StaticBody2D"]
-
-[node name="Tileset0" type="Sprite" parent="Bg"]
-position = Vector2( -120.99, -60.0967 )
-texture = ExtResource( 7 )
-
-[node name="Tileset1" type="Sprite" parent="Bg/Tileset0"]
-position = Vector2( 21.4659, 116.316 )
-texture = ExtResource( 9 )
-
-[node name="Tileset2" type="Sprite" parent="Bg/Tileset0"]
-position = Vector2( -10.733, 233.602 )
-scale = Vector2( 1.57129, 0.987075 )
-texture = ExtResource( 8 )
-
-[node name="Tileset4" type="Sprite" parent="Bg/Tileset0/Tileset2"]
-position = Vector2( 242.799, -332.896 )
-texture = ExtResource( 15 )
-
-[node name="Tileset5" type="Sprite" parent="Bg/Tileset0/Tileset2/Tileset4"]
-position = Vector2( -93.7663, 45.1718 )
-texture = ExtResource( 13 )
-
-[node name="Tileset6" type="Sprite" parent="Bg/Tileset0/Tileset2/Tileset4/Tileset5"]
-position = Vector2( -163.315, 154.173 )
-texture = ExtResource( 14 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -3, 0 )
@@ -131,6 +92,18 @@ orientation = -1
 position = Vector2( 219, 281 )
 collision_mask = 13
 
+[node name="Street1" type="Sprite" parent="Player1"]
+position = Vector2( 140, 6 )
+texture = ExtResource( 9 )
+
+[node name="Street2" type="Sprite" parent="Player1"]
+position = Vector2( 315, 6 )
+texture = ExtResource( 8 )
+
+[node name="Street3" type="Sprite" parent="Player1"]
+position = Vector2( 488, 6 )
+texture = ExtResource( 10 )
+
 [node name="Plus" parent="." instance=ExtResource( 6 )]
 position = Vector2( 441, 212 )
 
@@ -139,5 +112,9 @@ position = Vector2( 620, 215 )
 
 [node name="TileMap2" type="TileMap" parent="."]
 format = 1
+
+[node name="Street0" type="Sprite" parent="."]
+position = Vector2( 184, 287 )
+texture = ExtResource( 7 )
 
 [connection signal="body_entered" from="minus" to="minus" method="_on_minus_body_entered"]

@@ -4,16 +4,17 @@
 [ext_resource path="res://src/Items/minus_item.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 33.625 )
+extents = Vector2( 31.5, 31.3125 )
 
 [node name="minus" type="Area2D"]
 collision_layer = 4
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, -34 )
+position = Vector2( 0.5, -31.6875 )
 shape = SubResource( 1 )
 
-[node name="MinusItem" type="Sprite" parent="."]
-position = Vector2( 1, -37 )
+[node name="BluePickup" type="Sprite" parent="."]
+position = Vector2( 0, -32 )
+scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 1 )

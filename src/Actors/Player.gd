@@ -2,6 +2,7 @@ extends Actor
 class_name Player
 
 export var orientation: = 1 
+var show = 1;
 
 func get_direction() -> Vector2:
 	return Vector2(
@@ -21,5 +22,7 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		#print(collision.collider.name)
-		if collision.collider.name == "Swapper":
-			 set_orientation(-orientation)
+		if collision.collider.has_method("set_orientation") && collision.collider.show == 1 && collision.collider.orientation != orientation:
+			get_parent().in_shock += 1
+			show = 0
+			hide()
