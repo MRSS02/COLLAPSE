@@ -13,6 +13,10 @@ func get_direction() -> Vector2:
 func set_orientation(value: int) -> void:
 	orientation = value
 
+func eliminate(value) -> void:
+	value.hide()
+	value.get_node("CollisionShape2D").disabled = true 
+
 func _physics_process(delta: float) -> void:
 	var direction: = get_direction() 
 	velocity.x = (maxspeed.x) * direction.x * orientation
@@ -22,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		#print(collision.collider.name)
-		if collision.collider.has_method("set_orientation") && collision.collider.show == 1 && collision.collider.orientation != orientation:
-			get_parent().in_shock += 1
-			show = 0
-			hide()
+		if collision.collider.has_method("set_orientation") && orientation == 1 && collision.collider.orientation == -1:
+			get_parent().in_shock += 2
+			eliminate(collision.collider)
+			eliminate(self)
