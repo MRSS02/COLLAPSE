@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset_7.png-69a6dbeaf686f2c7d3081de4f7b5b445.stex"
+path="res://.import/Tijolo_0.png-0efe31803fda01fac93c502312dec863.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tileset_7.png"
-dest_files=[ "res://.import/tileset_7.png-69a6dbeaf686f2c7d3081de4f7b5b445.stex" ]
+source_file="res://assets/sprites/tiles/Tijolo_0.png"
+dest_files=[ "res://.import/Tijolo_0.png-0efe31803fda01fac93c502312dec863.stex" ]
 
 [params]
 

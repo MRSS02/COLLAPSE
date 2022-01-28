@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/street_144-export.png-dbb579c2a8d90c9dc2e0a3a498a89098.stex"
+path="res://.import/noite_predios.png-9181aed5de6c90da90da9acd7a1c50dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/street_144-export.png"
-dest_files=[ "res://.import/street_144-export.png-dbb579c2a8d90c9dc2e0a3a498a89098.stex" ]
+source_file="res://assets/sprites/BG/noite_predios.png"
+dest_files=[ "res://.import/noite_predios.png-9181aed5de6c90da90da9acd7a1c50dd.stex" ]
 
 [params]
 

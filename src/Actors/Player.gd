@@ -2,8 +2,32 @@ extends Actor
 class_name Player
 
 export var orientation: = 1 
-var show = 1;
+var facing_right = true
 
+onready var _animated_sprite = $AnimatedSprite
+
+func _ready() -> void:
+	if orientation == 1:
+		facing_right = true
+	else:
+		facing_right = false 
+
+func _process(_delta):
+	if Input.is_action_pressed("move_right"):
+		if orientation == 1:
+			facing_right = true
+		else:
+			facing_right = false 
+	else: if Input.is_action_pressed("move_left"):
+		if orientation == 1:
+			facing_right = false
+		else:
+			facing_right = true  
+	if facing_right:
+		_animated_sprite.play("idle_right")
+	else:
+		_animated_sprite.play("idle_left")
+		
 func get_direction() -> Vector2:
 	return Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"), 
