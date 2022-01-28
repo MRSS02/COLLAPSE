@@ -12,7 +12,7 @@
 [ext_resource path="res://assets/sprites/tiles/BG/noite_predios.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/BG/noite_nuvens.png" type="Texture" id=11]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="LevelTemplate2" type="Node2D"]
 position = Vector2( 1, 1 )
 script = ExtResource( 6 )
 
