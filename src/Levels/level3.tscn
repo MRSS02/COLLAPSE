@@ -1,0 +1,81 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/sprites/3.png" type="Texture" id=1]
+[ext_resource path="res://assets/tilesets/tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://src/Actors/PlusGuy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Items/minus_item.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Levels/level.gd" type="Script" id=6]
+[ext_resource path="res://src/Items/plus_item.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Actors/MinusGuy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/audio/music/music.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/sprites/plaquita_1.png" type="Texture" id=10]
+
+[node name="LevelTemplate" type="Node2D"]
+position = Vector2( 1, 1 )
+script = ExtResource( 6 )
+next_level = "res://src/Levels/level4.tscn"
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 336, 479 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 48, 48 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -589831, 13, 0, -589830, 12, 0, -589829, 13, 0, -655343, 13, 0, -655342, 12, 0, -655341, 13, 0, -524295, 13, 0, -524294, 12, 0, -524293, 13, 0, -589807, 13, 0, -589806, 12, 0, -589805, 13, 0, -458759, 13, 0, -458758, 12, 0, -458757, 13, 0, -524271, 13, 0, -524270, 12, 0, -524269, 13, 0, -393223, 13, 0, -393222, 12, 0, -393221, 13, 0, -458735, 13, 0, -458734, 12, 0, -458733, 13, 0, -327687, 13, 0, -327686, 12, 0, -327685, 13, 0, -393199, 13, 0, -393198, 12, 0, -393197, 13, 0, -262151, 13, 0, -262150, 12, 0, -262149, 13, 0, -327663, 13, 0, -327662, 12, 0, -327661, 13, 0, -196615, 13, 0, -196614, 12, 0, -196613, 13, 0, -262143, 13, 0, -262142, 13, 0, -262141, 14, 0, -262135, 13, 0, -262134, 13, 0, -262133, 14, 0, -262127, 13, 0, -262126, 12, 0, -262125, 13, 0, -131079, 13, 0, -131078, 12, 0, -131077, 13, 0, -196607, 13, 0, -196606, 13, 0, -196605, 14, 0, -196599, 13, 0, -196598, 13, 0, -196597, 14, 0, -196591, 13, 0, -196590, 12, 0, -196589, 13, 0, -65543, 13, 0, -65542, 12, 0, -65541, 13, 0, -131055, 13, 0, -131054, 12, 0, -131053, 13, 0, -7, 13, 0, -6, 12, 0, -5, 13, 0, -4, 7, 0, -3, 3, 0, -2, 4, 0, -1, 7, 0, -65536, 3, 0, -65535, 4, 0, -65534, 7, 0, -65533, 3, 0, -65532, 4, 0, -65531, 7, 0, -65530, 3, 0, -65529, 4, 0, -65528, 7, 0, -65527, 3, 0, -65526, 4, 0, -65525, 7, 0, -65524, 3, 0, -65523, 4, 0, -65522, 7, 0, -65521, 3, 0, -65520, 4, 0, -65519, 13, 0, -65518, 12, 0, -65517, 13, 0, 65529, 13, 0, 65530, 12, 0, 65531, 13, 0, 65532, 8, 0, 65533, 8, 0, 65534, 8, 0, 65535, 8, 0, 0, 8, 0, 1, 8, 0, 2, 8, 0, 3, 8, 0, 4, 8, 0, 5, 8, 0, 6, 8, 0, 7, 8, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 12, 8, 0, 13, 8, 0, 14, 8, 0, 15, 8, 0, 16, 8, 0, 17, 13, 0, 18, 12, 0, 19, 13, 0, 131065, 13, 0, 131066, 12, 0, 131067, 13, 0, 131068, 9, 0, 131069, 9, 0, 131070, 9, 0, 131071, 9, 0, 65536, 9, 0, 65537, 9, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 9, 0, 65542, 9, 0, 65543, 9, 0, 65544, 9, 0, 65545, 9, 0, 65546, 9, 0, 65547, 9, 0, 65548, 9, 0, 65549, 9, 0, 65550, 9, 0, 65551, 9, 0, 65552, 9, 0, 65553, 13, 0, 65554, 12, 0, 65555, 13, 0, 196601, 13, 0, 196602, 12, 0, 196603, 13, 0, 196604, 13, 0, 196605, 13, 0, 196606, 12, 0, 196607, 13, 0, 131072, 13, 0, 131073, 13, 0, 131074, 12, 0, 131075, 13, 0, 131076, 13, 0, 131077, 13, 0, 131078, 12, 0, 131079, 13, 0, 131080, 13, 0, 131081, 13, 0, 131082, 12, 0, 131083, 13, 0, 131084, 13, 0, 131085, 13, 0, 131086, 12, 0, 131087, 13, 0, 131088, 13, 0, 131089, 13, 0, 131090, 12, 0, 131091, 13, 0, 262137, 13, 0, 262138, 12, 0, 262139, 13, 0, 262140, 13, 0, 262141, 13, 0, 262142, 12, 0, 262143, 13, 0, 196608, 13, 0, 196609, 13, 0, 196610, 12, 0, 196611, 13, 0, 196612, 13, 0, 196613, 13, 0, 196614, 12, 0, 196615, 13, 0, 196616, 13, 0, 196617, 13, 0, 196618, 12, 0, 196619, 13, 0, 196620, 13, 0, 196621, 13, 0, 196622, 12, 0, 196623, 13, 0, 196624, 13, 0, 196625, 13, 0, 196626, 12, 0, 196627, 13, 0, 327673, 13, 0, 327674, 12, 0, 327675, 13, 0, 327676, 13, 0, 327677, 13, 0, 327678, 12, 0, 327679, 13, 0, 262144, 13, 0, 262145, 13, 0, 262146, 12, 0, 262147, 13, 0, 262148, 13, 0, 262149, 13, 0, 262150, 12, 0, 262151, 13, 0, 262152, 13, 0, 262153, 13, 0, 262154, 12, 0, 262155, 13, 0, 262156, 13, 0, 262157, 13, 0, 262158, 12, 0, 262159, 13, 0, 262160, 13, 0, 262161, 13, 0, 262162, 12, 0, 262163, 13, 0, 393209, 13, 0, 393210, 12, 0, 393211, 13, 0, 393212, 13, 0, 393213, 13, 0, 393214, 12, 0, 393215, 13, 0, 327680, 13, 0, 327681, 13, 0, 327682, 12, 0, 327683, 13, 0, 327684, 13, 0, 327685, 13, 0, 327686, 12, 0, 327687, 13, 0, 327688, 13, 0, 327689, 13, 0, 327690, 12, 0, 327691, 13, 0, 327692, 13, 0, 327693, 13, 0, 327694, 12, 0, 327695, 13, 0, 327696, 13, 0, 327697, 13, 0, 327698, 12, 0, 327699, 13, 0 )
+
+[node name="plus_item" parent="." instance=ExtResource( 7 )]
+position = Vector2( 563, 356 )
+
+[node name="plus_item2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 649, 356 )
+
+[node name="plus_item3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 729, 356 )
+
+[node name="minus" parent="." instance=ExtResource( 5 )]
+position = Vector2( 841, 287 )
+
+[node name="minus2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 458, 287 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 649, 361 )
+current = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 9 )
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_left = 23.0
+margin_top = 11.0
+margin_right = 173.0
+margin_bottom = 59.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+margin_left = 115.0
+margin_top = 20.0
+margin_right = 155.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.5, 0.75 )
+rect_pivot_offset = Vector2( 20, 9.33333 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 244, 527 )
+collision_mask = 29
+
+[node name="Player0" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1039, 527 )
+collision_mask = 45

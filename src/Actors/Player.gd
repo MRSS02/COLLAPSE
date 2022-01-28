@@ -2,7 +2,38 @@ extends Actor
 class_name Player
 
 export var orientation: = 1 
-var show = 1;
+var facing_right = true
+
+onready var _animated_sprite = $AnimatedSprite
+
+func _ready() -> void:
+	if orientation == 1:
+		facing_right = true
+	else:
+		facing_right = false 
+
+func _process(_delta):
+	if Input.is_action_pressed("move_right"):
+		if orientation == 1:
+			facing_right = true
+		else:
+			facing_right = false 
+	else: if Input.is_action_pressed("move_left"):
+		if orientation == 1:
+			facing_right = false
+		else:
+			facing_right = true  
+	if facing_right:
+		if orientation == 1:
+			_animated_sprite.play("idle_right_plus")
+		else:
+			_animated_sprite.play("idle_right_minus") 
+		
+	else:
+		if orientation == 1:
+			_animated_sprite.play("idle_left_plus")
+		else:
+			_animated_sprite.play("idle_left_minus") 
 
 func get_direction() -> Vector2:
 	return Vector2(
@@ -13,6 +44,10 @@ func get_direction() -> Vector2:
 func set_orientation(value: int) -> void:
 	orientation = value
 
+func eliminate(value) -> void:
+	value.hide()
+	value.get_node("CollisionShape2D").disabled = true 
+
 func _physics_process(delta: float) -> void:
 	var direction: = get_direction() 
 	velocity.x = (maxspeed.x) * direction.x * orientation
@@ -22,7 +57,7 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		#print(collision.collider.name)
-		if collision.collider.has_method("set_orientation") && collision.collider.show == 1 && collision.collider.orientation != orientation:
-			get_parent().in_shock += 1
-			show = 0
-			hide()
+		if collision.collider.has_method("set_orientation") && orientation == 1 && collision.collider.orientation == -1:
+			get_parent().in_shock += 2
+			eliminate(collision.collider)
+			eliminate(self)

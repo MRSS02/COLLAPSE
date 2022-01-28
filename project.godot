@@ -47,7 +47,8 @@ singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
 
 [global]
 
-scene=false
+scene=true
+display=false
 
 [input]
 
@@ -72,6 +73,12 @@ jump={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
  ]
 }
+reset={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":82,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
 
 [layer_names]
 
@@ -79,6 +86,8 @@ jump={
 2d_physics/layer_2="Obstacles"
 2d_physics/layer_3="Items"
 2d_physics/layer_4="World"
+2d_physics/layer_5="plus_block"
+2d_physics/layer_6="minus_block"
 
 [physics]
 
