@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset_3.png-ce8779dca6fe917b942f9a092b4a2664.stex"
+path="res://.import/bg_noite.png-cdc6a7132daddf8814fb3b07bf816817.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tiles/tileset_3.png"
-dest_files=[ "res://.import/tileset_3.png-ce8779dca6fe917b942f9a092b4a2664.stex" ]
+source_file="res://assets/sprites/BG/bg_noite.png"
+dest_files=[ "res://.import/bg_noite.png-cdc6a7132daddf8814fb3b07bf816817.stex" ]
 
 [params]
 

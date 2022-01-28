@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg_noite_lua.png-1d936e6d1a176f640919243bdd3f4658.stex"
+path="res://.import/noite_lua.png-03d6f08c5e2b372cfd259ca762866a28.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tiles/BG/bg_noite_lua.png"
-dest_files=[ "res://.import/bg_noite_lua.png-1d936e6d1a176f640919243bdd3f4658.stex" ]
+source_file="res://assets/sprites/BG/noite_lua.png"
+dest_files=[ "res://.import/noite_lua.png-03d6f08c5e2b372cfd259ca762866a28.stex" ]
 
 [params]
 
