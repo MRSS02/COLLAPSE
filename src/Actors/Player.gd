@@ -24,10 +24,17 @@ func _process(_delta):
 		else:
 			facing_right = true  
 	if facing_right:
-		_animated_sprite.play("idle_right")
-	else:
-		_animated_sprite.play("idle_left")
+		if orientation == 1:
+			_animated_sprite.play("idle_right_plus")
+		else:
+			_animated_sprite.play("idle_right_minus") 
 		
+	else:
+		if orientation == 1:
+			_animated_sprite.play("idle_left_plus")
+		else:
+			_animated_sprite.play("idle_left_minus") 
+
 func get_direction() -> Vector2:
 	return Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"), 

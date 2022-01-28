@@ -18,25 +18,22 @@ script = ExtResource( 6 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( 640, 357 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource( 7 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( 640, 357 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 texture = ExtResource( 10 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( 640, 357 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
 texture = ExtResource( 3 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 336, 479 )
+position = Vector2( -305, 118 )
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 48, 48 )
 collision_layer = 8
@@ -45,16 +42,15 @@ format = 1
 tile_data = PoolIntArray( -589832, 13, 0, -655340, 13, 0, -524296, 13, 0, -589804, 13, 0, -458760, 13, 0, -524268, 13, 0, -393224, 13, 0, -458732, 13, 0, -327688, 13, 0, -393196, 13, 0, -262152, 13, 0, -327660, 13, 0, -196616, 13, 0, -262124, 13, 0, -131080, 13, 0, -196588, 13, 0, -65544, 13, 0, -131052, 13, 0, -8, 13, 0, -65516, 13, 0, 65528, 13, 0, 20, 13, 0, 131064, 13, 0, 131065, 3, 0, 131066, 3, 0, 131067, 3, 0, 131068, 3, 0, 131069, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 3, 0, 65547, 3, 0, 65548, 3, 0, 65549, 3, 0, 65550, 3, 0, 65551, 3, 0, 65552, 3, 0, 65553, 3, 0, 65554, 3, 0, 65555, 3, 0, 65556, 13, 0, 196600, 13, 0, 196601, 5, 0, 196602, 5, 0, 196603, 5, 0, 196604, 5, 0, 196605, 5, 0, 196606, 5, 0, 196607, 5, 0, 131072, 5, 0, 131073, 5, 0, 131074, 5, 0, 131075, 5, 0, 131076, 5, 0, 131077, 5, 0, 131078, 5, 0, 131079, 5, 0, 131080, 5, 0, 131081, 5, 0, 131082, 5, 0, 131083, 5, 0, 131084, 5, 0, 131085, 5, 0, 131086, 5, 0, 131087, 5, 0, 131088, 5, 0, 131089, 5, 0, 131090, 5, 0, 131091, 5, 0, 131092, 13, 0, 262136, 13, 0, 262137, 10, 0, 262138, 10, 0, 262139, 10, 0, 262140, 10, 0, 262141, 10, 0, 262142, 10, 0, 262143, 10, 0, 196608, 10, 0, 196609, 10, 0, 196610, 10, 0, 196611, 10, 0, 196612, 10, 0, 196613, 10, 0, 196614, 10, 0, 196615, 10, 0, 196616, 10, 0, 196617, 10, 0, 196618, 10, 0, 196619, 10, 0, 196620, 10, 0, 196621, 10, 0, 196622, 10, 0, 196623, 10, 0, 196624, 10, 0, 196625, 10, 0, 196626, 10, 0, 196627, 10, 0, 196628, 13, 0, 327672, 13, 0, 327673, 13, 0, 327674, 13, 0, 327675, 13, 0, 327676, 13, 0, 327677, 13, 0, 327678, 13, 0, 327679, 13, 0, 262144, 13, 0, 262145, 13, 0, 262146, 13, 0, 262147, 13, 0, 262148, 13, 0, 262149, 13, 0, 262150, 13, 0, 262151, 13, 0, 262152, 13, 0, 262153, 13, 0, 262154, 13, 0, 262155, 13, 0, 262156, 13, 0, 262157, 13, 0, 262158, 13, 0, 262159, 13, 0, 262160, 13, 0, 262161, 13, 0, 262162, 13, 0, 262163, 13, 0, 262164, 13, 0 )
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 264, 622 )
+position = Vector2( -377, 261 )
 collision_mask = 29
 
 [node name="Player0" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1031, 620 )
+position = Vector2( 390, 259 )
 collision_mask = 45
-orientation = -1
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 639, 356 )
+position = Vector2( -1, -1 )
 current = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
