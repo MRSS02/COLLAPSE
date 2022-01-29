@@ -4,7 +4,7 @@ class_name Player
 export var orientation: = 1 
 var facing_right = true
 var walking = false
-onready var _animated_sprite = $AnimatedSprite
+onready var _animated_sprite = get_node("AnimatedSprite")
 
 func _ready() -> void:
 	if orientation == 1:

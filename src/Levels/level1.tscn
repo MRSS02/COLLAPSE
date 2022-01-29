@@ -6,7 +6,7 @@
 [ext_resource path="res://src/Actors/MinusGuy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/sprites/plaquita_1.png" type="Texture" id=8]
 
-[sub_resource type="GDScript" id=1]
+[sub_resource type="GDScript" id=3]
 script/source = "extends Node
 
 var in_shock = 0
@@ -105,7 +105,7 @@ func _physics_process(delta: float) -> void:
 
 [node name="LevelTemplate2" type="Node2D"]
 position = Vector2( 1, 1 )
-script = SubResource( 1 )
+script = SubResource( 3 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -305, 118 )
