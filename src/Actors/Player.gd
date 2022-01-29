@@ -28,13 +28,19 @@ func _process(_delta):
 			_animated_sprite.play("idle_right_plus")
 		else:
 			_animated_sprite.play("idle_right_minus") 
-		
 	else:
 		if orientation == 1:
 			_animated_sprite.play("idle_left_plus")
 		else:
 			_animated_sprite.play("idle_left_minus") 
-
+	if get_tree().get_current_scene().get_name() == "LevelTemplate1":
+		global_position.x= clamp(global_position.x,-617,619)
+	if get_tree().get_current_scene().get_name() == "LevelTemplate2":
+		global_position.x= clamp(global_position.x,-616,616)
+	if get_tree().get_current_scene().get_name() == "LevelTemplate3":
+		global_position.x= clamp(global_position.x,-474,490)
+	if get_tree().get_current_scene().get_name() == "LevelTemplate4":
+		global_position.x= clamp(global_position.x,-616,538)
 func get_direction() -> Vector2:
 	return Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"), 

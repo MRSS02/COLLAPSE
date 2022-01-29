@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Items/plus_block.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Tilesets/tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://src/Parallax/ParallaxBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Actors/PlusGuy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Items/minus_item.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Levels/level.gd" type="Script" id=6]
@@ -11,12 +10,10 @@
 [ext_resource path="res://assets/sprites/plaquita_1.png" type="Texture" id=10]
 [ext_resource path="res://src/Items/minus_block.tscn" type="PackedScene" id=11]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="LevelTemplate4" type="Node2D"]
 position = Vector2( -649, -361 )
 script = ExtResource( 6 )
 next_level = "res://src/Levels/level4.tscn"
-
-[node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 346, 575 )
@@ -37,34 +34,34 @@ format = 1
 tile_data = PoolIntArray( -655342, 36, 0, -655341, 37, 0, -589806, 36, 0, -589805, 37, 0, -524270, 36, 0, -524269, 37, 0, -458740, 12, 0, -458739, 13, 0, -458738, 14, 0, -458734, 36, 0, -458733, 37, 0, -458732, 38, 0, -393204, 33, 0, -393203, 34, 0, -393202, 35, 0, -393198, 36, 0, -393197, 37, 0, -393196, 38, 0, -327668, 37, 0, -327667, 37, 0, -327666, 38, 0, -327662, 36, 0, -327661, 37, 0, -327660, 37, 0, -196613, 12, 0, -196612, 13, 0, -196611, 13, 0, -196610, 13, 0, -196609, 13, 0, -262144, 13, 0, -262143, 13, 0, -262142, 14, 0, -262137, 12, 0, -262136, 13, 0, -262135, 13, 0, -262134, 13, 0, -262133, 13, 0, -262132, 37, 0, -262131, 37, 0, -262130, 38, 0, -262126, 36, 0, -262125, 37, 0, -262124, 37, 0, -131077, 33, 0, -131076, 34, 0, -131075, 34, 0, -131074, 34, 0, -131073, 34, 0, -196608, 34, 0, -196607, 34, 0, -196606, 35, 0, -196601, 33, 0, -196600, 34, 0, -196599, 34, 0, -196598, 34, 0, -196597, 34, 0, -196596, 37, 0, -196595, 37, 0, -196594, 38, 0, -196590, 36, 0, -196589, 37, 0, -196588, 37, 0, -65541, 36, 0, -65540, 37, 0, -65539, 37, 0, -65538, 37, 0, -65537, 37, 0, -131072, 37, 0, -131071, 37, 0, -131070, 38, 0, -131065, 36, 0, -131064, 37, 0, -131063, 37, 0, -131062, 37, 0, -131061, 37, 0, -131060, 37, 0, -131059, 37, 0, -131058, 38, 0, -131054, 36, 0, -131053, 37, 0, -131052, 37, 0, -5, 36, 0, -4, 37, 0, -3, 37, 0, -2, 37, 0, -1, 37, 0, -65536, 37, 0, -65535, 37, 0, -65534, 38, 0, -65529, 36, 0, -65528, 37, 0, -65527, 37, 0, -65526, 37, 0, -65525, 37, 0, -65524, 37, 0, -65523, 37, 0, -65522, 38, 0, -65518, 36, 0, -65517, 37, 0, -65516, 37, 0, 18, 36, 0, 19, 37, 0, 20, 37, 0, 65554, 36, 0, 65555, 37, 0, 65556, 37, 0, 131090, 36, 0, 131091, 37, 0 )
 
 [node name="plus_item" parent="." instance=ExtResource( 7 )]
-position = Vector2( 241, 65 )
+position = Vector2( 257, 65 )
 
 [node name="plus_item3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 769, 553 )
 
 [node name="minus" parent="." instance=ExtResource( 5 )]
-position = Vector2( 129, 273 )
+position = Vector2( 160, 289 )
 
 [node name="minus6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 585, 160 )
+position = Vector2( 577, 160 )
 
 [node name="minus7" parent="." instance=ExtResource( 5 )]
-position = Vector2( 493, 160 )
+position = Vector2( 488, 160 )
 
 [node name="minus8" parent="." instance=ExtResource( 5 )]
 position = Vector2( 401, 160 )
 
 [node name="minus9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 309, 160 )
+position = Vector2( 313, 161 )
 
 [node name="minus4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 713, 209 )
+position = Vector2( 713, 200 )
 
 [node name="minus2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 129, 185 )
+position = Vector2( 161, 200 )
 
 [node name="minus5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 713, 281 )
+position = Vector2( 713, 288 )
 
 [node name="minus3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 553, 553 )
@@ -110,12 +107,12 @@ collision_layer = 16
 collision_mask = 8
 
 [node name="plus_block9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 705, 121 )
+position = Vector2( 705, 120 )
 collision_layer = 16
 collision_mask = 8
 
 [node name="plus_block10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 657, 121 )
+position = Vector2( 657, 120 )
 collision_layer = 16
 collision_mask = 8
 
@@ -159,11 +156,11 @@ collision_mask = 8
 [node name="minus_blocks" type="Node" parent="."]
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 57, 337 )
+position = Vector2( 41, 337 )
 collision_mask = 29
 
 [node name="Player3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 337, 625 )
+position = Vector2( 90, 625 )
 collision_mask = 29
 
 [node name="Camera2D" type="Camera2D" parent="."]

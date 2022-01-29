@@ -1,7 +1,7 @@
 extends Node
 
 var menu_music = preload("res://assets/audio/music/music.ogg")
-var game_music = preload("res://assets/audio/music/music.ogg")
+var game_music = preload("res://assets/audio/music/game.mp3")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

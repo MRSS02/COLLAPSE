@@ -39,6 +39,7 @@ config/icon="res://icon.png"
 [autoload]
 
 MusicController="*res://src/Autoload/MusicController.tscn"
+GlobalParallaxBackground="*res://src/Autoload/ParallaxBackground.tscn"
 
 [display]
 
