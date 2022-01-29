@@ -4,7 +4,6 @@
 [ext_resource path="res://src/Tilesets/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://src/Actors/PlusGuy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/MinusGuy.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Levels/level.gd" type="Script" id=6]
 [ext_resource path="res://assets/sprites/plaquita_1.png" type="Texture" id=8]
 
 [node name="LevelTemplate2" type="Node2D"]
