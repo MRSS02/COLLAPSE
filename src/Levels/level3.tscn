@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/audio/music/music.ogg" type="AudioStream" id=9]
 [ext_resource path="res://assets/sprites/plaquita_1.png" type="Texture" id=10]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="LevelTemplate2" type="Node2D"]
 position = Vector2( -649, -361 )
 script = ExtResource( 6 )
 next_level = "res://src/Levels/level4.tscn"
