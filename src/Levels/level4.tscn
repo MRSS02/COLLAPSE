@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/sprites/plaquita_1.png" type="Texture" id=10]
 [ext_resource path="res://src/Items/minus_block.tscn" type="PackedScene" id=11]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="LevelTemplate4" type="Node2D"]
 position = Vector2( -649, -361 )
 script = ExtResource( 6 )
 next_level = "res://src/Levels/level4.tscn"
@@ -159,11 +159,11 @@ collision_mask = 8
 [node name="minus_blocks" type="Node" parent="."]
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 57, 337 )
+position = Vector2( 41, 337 )
 collision_mask = 29
 
 [node name="Player3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 337, 625 )
+position = Vector2( 90, 625 )
 collision_mask = 29
 
 [node name="Camera2D" type="Camera2D" parent="."]

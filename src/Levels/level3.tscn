@@ -9,7 +9,7 @@
 [ext_resource path="res://src/Items/plus_item.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/sprites/plaquita_1.png" type="Texture" id=10]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="LevelTemplate3" type="Node2D"]
 position = Vector2( -649, -361 )
 script = ExtResource( 6 )
 next_level = "res://src/Levels/level4.tscn"
@@ -76,11 +76,11 @@ __meta__ = {
 }
 
 [node name="Player1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 251, 623 )
+position = Vector2( 344, 623 )
 collision_mask = 29
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1041, 623 )
+position = Vector2( 961, 623 )
 collision_mask = 29
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
