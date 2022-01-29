@@ -3,7 +3,7 @@ class_name Player
 
 export var orientation: = 1 
 var facing_right = true
-
+var walking = false
 onready var _animated_sprite = $AnimatedSprite
 
 func _ready() -> void:
@@ -14,26 +14,43 @@ func _ready() -> void:
 
 func _process(_delta):
 	if Input.is_action_pressed("move_right"):
+		walking = true
 		if orientation == 1:
 			facing_right = true
 		else:
 			facing_right = false 
-	else: if Input.is_action_pressed("move_left"):
-		if orientation == 1:
-			facing_right = false
+	else: 
+		if Input.is_action_pressed("move_left"):
+			walking = true
+			if orientation == 1:
+				facing_right = false
+			else:
+				facing_right = true
 		else:
-			facing_right = true  
+			walking = false  
 	if facing_right:
 		if orientation == 1:
-			_animated_sprite.play("idle_right_plus")
+			if walking && is_on_floor():
+				_animated_sprite.play("walk_right_plus")
+			else:
+				_animated_sprite.play("idle_right_plus")
 		else:
-			_animated_sprite.play("idle_right_minus") 
+			if walking && is_on_floor():
+				_animated_sprite.play("walk_right_minus")
+			else:
+				_animated_sprite.play("idle_right_minus") 
 		
 	else:
 		if orientation == 1:
-			_animated_sprite.play("idle_left_plus")
+			if walking && is_on_floor():
+				_animated_sprite.play("walk_left_plus")
+			else:
+				_animated_sprite.play("idle_left_plus")
 		else:
-			_animated_sprite.play("idle_left_minus") 
+			if walking && is_on_floor():
+				_animated_sprite.play("walk_left_minus")
+			else:
+				_animated_sprite.play("idle_left_minus") 
 
 func get_direction() -> Vector2:
 	return Vector2(
