@@ -51,10 +51,12 @@ collision_mask = 0
 [node name="minus_block2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -570, -438 )
 collision_layer = 32
+collision_mask = 0
 
 [node name="minus_block5" parent="." instance=ExtResource( 5 )]
 position = Vector2( -473, -595 )
 collision_layer = 32
+collision_mask = 0
 
 [node name="minus_block7" parent="." instance=ExtResource( 5 )]
 position = Vector2( -474, -975 )
@@ -79,6 +81,7 @@ collision_mask = 0
 [node name="minus_block6" parent="." instance=ExtResource( 5 )]
 position = Vector2( -425, -595 )
 collision_layer = 32
+collision_mask = 0
 
 [node name="minus_block3" parent="." instance=ExtResource( 5 )]
 position = Vector2( -509, -306 )
@@ -117,15 +120,17 @@ collision_mask = 0
 
 [node name="plus_block4" parent="." instance=ExtResource( 10 )]
 position = Vector2( -140, -912 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="plus_block6" parent="." instance=ExtResource( 10 )]
 position = Vector2( -290, -819 )
+collision_layer = 16
+collision_mask = 0
 
 [node name="plus_block5" parent="." instance=ExtResource( 10 )]
 position = Vector2( -348, -1054 )
 collision_layer = 16
+collision_mask = 0
 
 [node name="minus" parent="." instance=ExtResource( 8 )]
 position = Vector2( -574, -1265 )
@@ -195,10 +200,22 @@ collision_layer = 4
 position = Vector2( -617, 263 )
 collision_layer = 4
 
+[node name="Player1" parent="." instance=ExtResource( 4 )]
+position = Vector2( -369, 251 )
+
+[node name="Player4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -232, 255 )
+
+[node name="Player3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -458, -171 )
+
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1, 1 )
 zoom = Vector2( 1.25, 1.25 )
+playerA = NodePath("../Player1")
 playerB = NodePath("../Player2")
+playerC = NodePath("../Player3")
+playerD = NodePath("../Player4")
 
 [node name="LevelUI" parent="." instance=ExtResource( 1 )]
 set_number = "8"
