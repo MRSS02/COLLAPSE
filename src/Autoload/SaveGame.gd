@@ -1,7 +1,7 @@
 extends Node
 
 var save_number: = 1
-var number := 1
+var current_number := 1
 
 func save(content, number):
 	var file_number: = File.new()
@@ -16,3 +16,4 @@ func save(content, number):
 		file_number.store_string(String(number))
 		file.close()
 	file_number.close()
+	current_number = number
