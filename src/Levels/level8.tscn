@@ -39,8 +39,9 @@ tile_data = PoolIntArray( -2949094, 36, 0, -2949093, 38, 0, -2949092, 38, 0, -29
 position = Vector2( -128, -652 )
 
 [node name="plus_block8" parent="." instance=ExtResource( 10 )]
-position = Vector2( -137, -630 )
+position = Vector2( -137, -583 )
 collision_layer = 16
+collision_mask = 0
 
 [node name="minus_block" parent="." instance=ExtResource( 5 )]
 position = Vector2( -618, -438 )
@@ -58,18 +59,22 @@ collision_layer = 32
 [node name="minus_block7" parent="." instance=ExtResource( 5 )]
 position = Vector2( -474, -975 )
 collision_layer = 32
+collision_mask = 0
 
 [node name="minus_block8" parent="." instance=ExtResource( 5 )]
 position = Vector2( -432, -975 )
 collision_layer = 32
+collision_mask = 0
 
 [node name="minus_block9" parent="." instance=ExtResource( 5 )]
 position = Vector2( -384, -975 )
 collision_layer = 32
+collision_mask = 0
 
 [node name="minus_block10" parent="." instance=ExtResource( 5 )]
 position = Vector2( -336, -974 )
 collision_layer = 32
+collision_mask = 0
 
 [node name="minus_block6" parent="." instance=ExtResource( 5 )]
 position = Vector2( -425, -595 )
@@ -112,6 +117,8 @@ collision_mask = 0
 
 [node name="plus_block4" parent="." instance=ExtResource( 10 )]
 position = Vector2( -140, -912 )
+collision_layer = 16
+collision_mask = 0
 
 [node name="plus_block6" parent="." instance=ExtResource( 10 )]
 position = Vector2( -290, -819 )
@@ -188,22 +195,10 @@ collision_layer = 4
 position = Vector2( -617, 263 )
 collision_layer = 4
 
-[node name="Player1" parent="." instance=ExtResource( 4 )]
-position = Vector2( -369, 251 )
-
-[node name="Player4" parent="." instance=ExtResource( 4 )]
-position = Vector2( -232, 255 )
-
-[node name="Player3" parent="." instance=ExtResource( 4 )]
-position = Vector2( -458, -171 )
-
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1, 1 )
 zoom = Vector2( 1.25, 1.25 )
-playerA = NodePath("../Player1")
 playerB = NodePath("../Player2")
-playerC = NodePath("../Player3")
-playerD = NodePath("../Player4")
 
 [node name="LevelUI" parent="." instance=ExtResource( 1 )]
 set_number = "8"
