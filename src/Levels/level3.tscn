@@ -4,14 +4,30 @@
 [ext_resource path="res://src/Tilesets/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://src/Actors/PlusGuy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Items/minus_item.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Levels/level.gd" type="Script" id=6]
 [ext_resource path="res://src/Items/plus_item.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/sprites/plaquita_1.png" type="Texture" id=10]
 
+<<<<<<< HEAD
 [node name="LevelTemplate3" type="Node2D"]
+=======
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+var in_shock = 0
+export var players = 2
+export var next_level = \"res://src/Levels/level2.tscn\"
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed(\"reset\"):
+		get_tree().reload_current_scene() 
+	if in_shock >= players:
+		get_tree().change_scene(next_level)
+"
+
+[node name="LevelTemplate" type="Node2D"]
+>>>>>>> addda936ca3e22a3a1300f964e0efba80071ea50
 position = Vector2( -649, -361 )
-script = ExtResource( 6 )
-next_level = "res://src/Levels/level4.tscn"
+script = SubResource( 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 343, 575 )
