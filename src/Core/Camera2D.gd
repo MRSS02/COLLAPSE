@@ -21,7 +21,7 @@ func _process(delta):
 		position = average_position / players.size()
 		position.y = min(position.y, 0)
 	if (SaveGame.number == 8):
-		zoom = Vector2(max(1, max_distance/350), max(min_zoom, max_distance/350))
+		zoom = Vector2(max(1, max_distance/350), max(1, max_distance/350))
 	else:
 		zoom = Vector2(max(1, max_distance/1200), max(min_zoom, max_distance/1200))
 # Called when the node enters the scene tree for the first time.
