@@ -51,6 +51,7 @@ __meta__ = {
 }
 
 [node name="PAUSED" type="Label" parent="."]
+visible = false
 margin_left = 1000.0
 margin_top = 24.0
 margin_right = 744.0
