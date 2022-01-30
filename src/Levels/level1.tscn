@@ -114,7 +114,6 @@ collision_mask = 45
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -1, -1 )
-current = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

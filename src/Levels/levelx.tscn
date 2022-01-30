@@ -108,10 +108,16 @@ position = Vector2( 128, 494 )
 [node name="Player1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 159, 574 )
 collision_mask = 13
+maxspeed = null
+gravity = null
+orientation = null
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 305, 673 )
 collision_mask = 13
+maxspeed = null
+gravity = null
+orientation = null
 
 [node name="1" type="Sprite" parent="."]
 position = Vector2( 48, 54 )
