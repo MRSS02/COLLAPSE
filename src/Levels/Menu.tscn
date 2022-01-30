@@ -22,31 +22,31 @@ position = Vector2( 0, -229 )
 texture = ExtResource( 2 )
 
 [node name="NEW_GAME" type="Sprite" parent="."]
-position = Vector2( 10, -23 )
+position = Vector2( 10, -69 )
 texture = ExtResource( 3 )
 
 [node name="NEW_GAME_SELECTED" type="Sprite" parent="."]
-position = Vector2( 10, -23 )
+position = Vector2( 10, -69 )
 texture = ExtResource( 7 )
 
 [node name="CHANGE_CONTROLS" type="Sprite" parent="."]
-position = Vector2( 0, 75 )
+position = Vector2( 0, 29 )
 texture = ExtResource( 5 )
 
 [node name="CHANGE_CONTROLS_SELECTED" type="Sprite" parent="."]
 visible = false
-position = Vector2( 0, 75 )
+position = Vector2( 0, 29 )
 texture = ExtResource( 9 )
 
 [node name="LOAD_SAVE" type="Sprite" parent="."]
-position = Vector2( 0, 25 )
+position = Vector2( 0, -21 )
 texture = ExtResource( 4 )
 
 [node name="LOAD_SAVE_SELECTED" type="Sprite" parent="."]
 visible = false
-position = Vector2( 0, 25 )
+position = Vector2( 0, -21 )
 texture = ExtResource( 8 )
 
 [node name="Credits" type="Sprite" parent="."]
-position = Vector2( 0, 256 )
+position = Vector2( 0, 232 )
 texture = ExtResource( 6 )
