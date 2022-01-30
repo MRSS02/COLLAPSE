@@ -12,46 +12,6 @@ func _ready() -> void:
 	else:
 		facing_right = false 
 
-func _process(_delta):
-	if Input.is_action_pressed("move_right"):
-		walking = true
-		if orientation == 1:
-			facing_right = true
-		else:
-			facing_right = false 
-	else: 
-		if Input.is_action_pressed("move_left"):
-			walking = true
-			if orientation == 1:
-				facing_right = false
-			else:
-				facing_right = true
-		else:
-			walking = false  
-	if facing_right:
-		if orientation == 1:
-			if walking && is_on_floor():
-				_animated_sprite.play("walk_right_plus")
-			else:
-				_animated_sprite.play("idle_right_plus")
-		else:
-			if walking && is_on_floor():
-				_animated_sprite.play("walk_right_minus")
-			else:
-				_animated_sprite.play("idle_right_minus") 
-		
-	else:
-		if orientation == 1:
-			if walking && is_on_floor():
-				_animated_sprite.play("walk_left_plus")
-			else:
-				_animated_sprite.play("idle_left_plus")
-		else:
-			if walking && is_on_floor():
-				_animated_sprite.play("walk_left_minus")
-			else:
-				_animated_sprite.play("idle_left_minus") 
-
 func get_direction() -> Vector2:
 	return Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"), 
@@ -78,3 +38,65 @@ func _physics_process(delta: float) -> void:
 			get_parent().in_shock += 2
 			eliminate(collision.collider)
 			eliminate(self)
+	if Input.is_action_pressed("move_right"):
+		walking = true
+		if orientation == 1:
+			facing_right = true
+		else:
+			facing_right = false 
+	else: 
+		if Input.is_action_pressed("move_left"):
+			walking = true
+			if orientation == 1:
+				facing_right = false
+			else:
+				facing_right = true
+		else:
+			walking = false  
+	if facing_right:
+		if orientation == 1:
+			if is_on_floor():
+				if walking:  
+					_animated_sprite.play("walk_right_plus")
+				else:
+					_animated_sprite.play("idle_right_plus")
+			else:
+				if velocity.y >= 0: 
+					_animated_sprite.play("fall_right_plus")
+				else:
+					_animated_sprite.play("jump_right_plus")
+		else:
+			if is_on_floor():
+				if walking:  
+					_animated_sprite.play("walk_right_minus")
+				else:
+					_animated_sprite.play("idle_right_minus")
+			else: 
+				if velocity.y >= 0: 
+					_animated_sprite.play("fall_right_minus")
+				else:
+					_animated_sprite.play("jump_right_minus")
+
+	else:
+		if orientation == 1:
+			if is_on_floor():
+				if walking:  
+					_animated_sprite.play("walk_left_plus")
+				else:
+					_animated_sprite.play("idle_left_plus")
+			else:
+				if velocity.y >= 0: 
+					_animated_sprite.play("fall_left_plus")
+				else:
+					_animated_sprite.play("jump_left_plus")
+		else:
+			if is_on_floor():
+				if walking:  
+					_animated_sprite.play("walk_left_minus")
+				else:
+					_animated_sprite.play("idle_left_minus")
+			else:
+				if velocity.y >= 0: 
+					_animated_sprite.play("fall_left_minus")
+				else:
+					_animated_sprite.play("jump_left_minus")
