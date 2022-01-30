@@ -99,25 +99,15 @@ position = Vector2( 660, 129 )
 [node name="Player0" parent="." instance=ExtResource( 8 )]
 position = Vector2( 180, 185 )
 collision_mask = 13
-maxspeed = null
-gravity = null
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 695, 670 )
 collision_mask = 13
-maxspeed = null
-gravity = null
-orientation = null
 
 [node name="Player2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 171, 669 )
 collision_mask = 13
-maxspeed = null
-gravity = null
 
 [node name="Player3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1149, 670 )
 collision_mask = 13
-maxspeed = null
-gravity = null
-orientation = null
