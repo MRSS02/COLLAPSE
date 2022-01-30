@@ -5,6 +5,7 @@ export var playerB: NodePath = ""
 export var playerC: NodePath = ""
 export var playerD: NodePath = ""
 export var fixed: bool = false 
+export var min_zoom = 1.00
 var players: Array = [] 
 # Declare member variables here. Examples:
 # var a = 2
@@ -19,7 +20,10 @@ func _process(delta):
 	if !fixed:   
 		position = average_position / players.size()
 		position.y = min(position.y, 0)
-	zoom = Vector2(max(1, max_distance/1200), max(1, max_distance/1200))
+	if (SaveGame.number == 8):
+		zoom = Vector2(max(1, max_distance/350), max(min_zoom, max_distance/350))
+	else:
+		zoom = Vector2(max(1, max_distance/1200), max(min_zoom, max_distance/1200))
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if playerA != "": players.append(get_node(playerA))

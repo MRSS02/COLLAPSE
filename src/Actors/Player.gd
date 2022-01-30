@@ -27,17 +27,6 @@ func eliminate(value) -> void:
 
 func _physics_process(delta: float) -> void:
 	var direction: = get_direction() 
-	velocity.x = (maxspeed.x) * direction.x * orientation
-	velocity.y += (maxspeed.y) * direction.y
-	#print(direction.x, is_on_floor()) 
-	velocity = move_and_slide(velocity)
-	for i in get_slide_count():
-		var collision = get_slide_collision(i)
-		#print(collision.collider.name)
-		if collision.collider.has_method("set_orientation") && orientation == 1 && collision.collider.orientation == -1:
-			get_parent().in_shock += 2
-			eliminate(collision.collider)
-			eliminate(self)
 	if Input.is_action_pressed("move_right"):
 		walking = true
 		if orientation == 1:
@@ -100,3 +89,14 @@ func _physics_process(delta: float) -> void:
 					_animated_sprite.play("fall_left_minus")
 				else:
 					_animated_sprite.play("jump_left_minus")
+	velocity.x = (maxspeed.x) * direction.x * orientation
+	velocity.y += (maxspeed.y) * direction.y
+	#print(direction.x, is_on_floor()) 
+	velocity = move_and_slide(velocity)
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		#print(collision.collider.name)
+		if collision.collider.has_method("set_orientation") && orientation == 1 && collision.collider.orientation == -1:
+			get_parent().in_shock += 2
+			eliminate(collision.collider)
+			eliminate(self)
