@@ -1,0 +1,192 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Items/plus_block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Tilesets/tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://src/Actors/PlusGuy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Items/minus_item.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Levels/level.gd" type="Script" id=6]
+[ext_resource path="res://src/Items/plus_item.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sprites/4.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/plaquita_1.png" type="Texture" id=10]
+[ext_resource path="res://src/Items/minus_block.tscn" type="PackedScene" id=11]
+
+[node name="LevelTemplate" type="Node2D"]
+position = Vector2( -649, -361 )
+script = ExtResource( 6 )
+next_level = "res://src/Levels/level4.tscn"
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 346, 575 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 48, 48 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -1114118, 37, 0, -1114117, 37, 0, -1114116, 37, 0, -1048582, 37, 0, -1048581, 37, 0, -1048580, 37, 0, -983046, 37, 0, -983045, 37, 0, -983044, 37, 0, -917510, 37, 0, -917509, 37, 0, -917508, 37, 0, -851974, 37, 0, -851973, 37, 0, -851972, 37, 0, -786438, 37, 0, -786437, 37, 0, -786436, 37, 0, -720904, 37, 0, -720903, 37, 0, -720902, 37, 0, -720901, 37, 0, -720900, 38, 0, -786412, 37, 0, -655368, 37, 0, -655367, 37, 0, -655366, 37, 0, -655365, 37, 0, -655364, 38, 0, -720876, 37, 0, -589832, 37, 0, -655340, 37, 0, -524296, 37, 0, -589804, 37, 0, -458760, 37, 0, -524268, 37, 0, -393224, 37, 0, -458732, 37, 0, -327688, 37, 0, -393196, 37, 0, -262152, 37, 0, -327660, 37, 0, -196616, 34, 0, -262124, 37, 0, -131080, 37, 0, -196588, 37, 0, -65544, 37, 0, -131052, 37, 0, -8, 37, 0, -7, 4, 0, -6, 3, 0, -5, 3, 0, -4, 3, 0, -3, 4, 0, -2, 3, 0, -1, 3, 0, -65536, 3, 0, -65535, 4, 0, -65534, 3, 0, -65533, 3, 0, -65532, 3, 0, -65531, 4, 0, -65530, 3, 0, -65529, 3, 0, -65528, 3, 0, -65527, 4, 0, -65526, 3, 0, -65525, 3, 0, -65524, 3, 0, -65523, 4, 0, -65522, 3, 0, -65521, 3, 0, -65520, 3, 0, -65519, 4, 0, -65518, 3, 0, -65517, 3, 0, -65516, 37, 0, 65528, 37, 0, 65529, 8, 0, 65530, 8, 0, 65531, 8, 0, 65532, 8, 0, 65533, 8, 0, 65534, 8, 0, 65535, 8, 0, 0, 8, 0, 1, 8, 0, 2, 8, 0, 3, 8, 0, 4, 8, 0, 5, 8, 0, 6, 8, 0, 7, 8, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 12, 8, 0, 13, 8, 0, 14, 8, 0, 15, 8, 0, 16, 8, 0, 17, 5, 0, 18, 5, 0, 19, 5, 0, 20, 37, 0, 131064, 37, 0, 131065, 9, 0, 131066, 9, 0, 131067, 9, 0, 131068, 9, 0, 131069, 9, 0, 131070, 9, 0, 131071, 9, 0, 65536, 9, 0, 65537, 9, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 9, 0, 65542, 9, 0, 65543, 9, 0, 65544, 9, 0, 65545, 9, 0, 65546, 9, 0, 65547, 9, 0, 65548, 9, 0, 65549, 9, 0, 65550, 9, 0, 65551, 9, 0, 65552, 9, 0, 65553, 11, 0, 65554, 11, 0, 65555, 11, 0, 65556, 37, 0, 196601, 44, 0, 196602, 44, 0, 196603, 44, 0, 196604, 44, 0, 196605, 44, 0, 196606, 44, 0, 196607, 44, 0, 131072, 44, 0, 131073, 44, 0, 131074, 44, 0, 131075, 44, 0, 131076, 44, 0, 131077, 44, 0, 131078, 44, 0, 131079, 44, 0, 131080, 44, 0, 131081, 44, 0, 131082, 44, 0, 131083, 44, 0, 131084, 44, 0, 131085, 44, 0, 131086, 44, 0, 131087, 44, 0, 131088, 44, 0, 131089, 44, 0, 131090, 44, 0, 131091, 44, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+position = Vector2( 344, 479 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 48, 48 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -655342, 36, 0, -655341, 37, 0, -589806, 36, 0, -589805, 37, 0, -524270, 36, 0, -524269, 37, 0, -458740, 12, 0, -458739, 13, 0, -458738, 14, 0, -458734, 36, 0, -458733, 37, 0, -458732, 38, 0, -393204, 33, 0, -393203, 34, 0, -393202, 35, 0, -393198, 36, 0, -393197, 37, 0, -393196, 38, 0, -327668, 37, 0, -327667, 37, 0, -327666, 38, 0, -327662, 36, 0, -327661, 37, 0, -327660, 37, 0, -196613, 12, 0, -196612, 13, 0, -196611, 13, 0, -196610, 13, 0, -196609, 13, 0, -262144, 13, 0, -262143, 13, 0, -262142, 14, 0, -262137, 12, 0, -262136, 13, 0, -262135, 13, 0, -262134, 13, 0, -262133, 13, 0, -262132, 37, 0, -262131, 37, 0, -262130, 38, 0, -262126, 36, 0, -262125, 37, 0, -262124, 37, 0, -131077, 33, 0, -131076, 34, 0, -131075, 34, 0, -131074, 34, 0, -131073, 34, 0, -196608, 34, 0, -196607, 34, 0, -196606, 35, 0, -196601, 33, 0, -196600, 34, 0, -196599, 34, 0, -196598, 34, 0, -196597, 34, 0, -196596, 37, 0, -196595, 37, 0, -196594, 38, 0, -196590, 36, 0, -196589, 37, 0, -196588, 37, 0, -65541, 36, 0, -65540, 37, 0, -65539, 37, 0, -65538, 37, 0, -65537, 37, 0, -131072, 37, 0, -131071, 37, 0, -131070, 38, 0, -131065, 36, 0, -131064, 37, 0, -131063, 37, 0, -131062, 37, 0, -131061, 37, 0, -131060, 37, 0, -131059, 37, 0, -131058, 38, 0, -131054, 36, 0, -131053, 37, 0, -131052, 37, 0, -5, 36, 0, -4, 37, 0, -3, 37, 0, -2, 37, 0, -1, 37, 0, -65536, 37, 0, -65535, 37, 0, -65534, 38, 0, -65529, 36, 0, -65528, 37, 0, -65527, 37, 0, -65526, 37, 0, -65525, 37, 0, -65524, 37, 0, -65523, 37, 0, -65522, 38, 0, -65518, 36, 0, -65517, 37, 0, -65516, 37, 0, 18, 36, 0, 19, 37, 0, 20, 37, 0, 65554, 36, 0, 65555, 37, 0, 65556, 37, 0, 131090, 36, 0, 131091, 37, 0 )
+
+[node name="plus_item" parent="." instance=ExtResource( 7 )]
+position = Vector2( 257, 65 )
+
+[node name="plus_item3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 769, 553 )
+
+[node name="minus" parent="." instance=ExtResource( 5 )]
+position = Vector2( 160, 289 )
+
+[node name="minus6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 577, 160 )
+
+[node name="minus7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 488, 160 )
+
+[node name="minus8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 401, 160 )
+
+[node name="minus9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 313, 161 )
+
+[node name="minus4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 713, 200 )
+
+[node name="minus2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 161, 200 )
+
+[node name="minus5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 713, 288 )
+
+[node name="minus3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 553, 553 )
+
+[node name="minus_block" parent="." instance=ExtResource( 11 )]
+position = Vector2( 514, 359 )
+collision_layer = 32
+collision_mask = 8
+
+[node name="minus_block5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 82, 359 )
+collision_layer = 32
+collision_mask = 8
+
+[node name="minus_block6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 34, 359 )
+collision_layer = 32
+collision_mask = 8
+
+[node name="minus_block3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 562, 359 )
+collision_layer = 32
+collision_mask = 8
+
+[node name="minus_block2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 657, 359 )
+collision_layer = 32
+collision_mask = 8
+
+[node name="minus_block4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 610, 359 )
+collision_layer = 32
+collision_mask = 8
+
+[node name="plus_block" parent="." instance=ExtResource( 1 )]
+position = Vector2( 465, 503 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1184, 262 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 705, 120 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 657, 120 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1088, 407 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1184, 505 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 465, 597 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 465, 550 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 704, 503 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 704, 597 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_block13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 704, 550 )
+collision_layer = 16
+collision_mask = 8
+
+[node name="plus_blocks" type="Node" parent="."]
+
+[node name="minus_blocks" type="Node" parent="."]
+
+[node name="Player2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 57, 337 )
+collision_mask = 29
+
+[node name="Player3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 337, 625 )
+collision_mask = 29
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 649, 361 )
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_left = 23.0
+margin_top = 11.0
+margin_right = 173.0
+margin_bottom = 59.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+margin_left = 115.0
+margin_top = 20.0
+margin_right = 155.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.5, 0.75 )
+rect_pivot_offset = Vector2( 20, 9.33333 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
