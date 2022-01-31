@@ -99,4 +99,7 @@ func _physics_process(delta: float) -> void:
 		if collision.collider.has_method("set_orientation") && orientation == 1 && collision.collider.orientation == -1:
 			get_parent().in_shock += 2
 			eliminate(collision.collider)
+			if (SaveGame.current_number == 8):
+				get_parent().get_node("Camera2D").players.erase(collision.collider)
+				get_parent().get_node("Camera2D").players.erase(self)
 			eliminate(self)
