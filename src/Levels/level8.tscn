@@ -114,6 +114,11 @@ position = Vector2( -89, -583 )
 collision_layer = 16
 collision_mask = 0
 
+[node name="plus_block10" parent="." instance=ExtResource( 10 )]
+position = Vector2( -87, -294 )
+collision_layer = 16
+collision_mask = 0
+
 [node name="plus_block9" parent="." instance=ExtResource( 10 )]
 position = Vector2( 106, -486 )
 collision_layer = 16
