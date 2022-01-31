@@ -30,7 +30,7 @@ func _process(delta):
 		zoom = Vector2(max(1, max_distance/480), max(1, max_distance/480))
 	else:
 		if (SaveGame.current_number == 8): 
-			zoom = Vector2(max(1, max_distance/820), max(1, max_distance/820))
+			zoom = Vector2(max(1, max_distance/760), max(1, max_distance/760))
 		else:
 			zoom = Vector2(max(1, max_distance/1200), max(1, max_distance/1200))
 # Called when the node enters the scene tree for the first time.
