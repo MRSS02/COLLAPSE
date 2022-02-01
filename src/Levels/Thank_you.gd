@@ -8,6 +8,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Unpause.can_pause = false
 	GlobalParallaxBackground.get_node("City").move_speed = -4
 
 func _process(delta):
