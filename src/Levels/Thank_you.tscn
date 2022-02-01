@@ -34,16 +34,17 @@ __meta__ = {
 
 [node name="Label2" type="Label" parent="."]
 margin_left = -472.0
-margin_top = 224.0
+margin_top = 212.0
 margin_right = 2048.0
-margin_bottom = 474.0
+margin_bottom = 462.0
 theme = SubResource( 1 )
 custom_fonts/font = SubResource( 2 )
-text = "
-
-Special thanks to Maicon Douglas, Rodrigo Rocha, 
+text = "Special thanks to Maicon Douglas, Rodrigo Rocha, 
 Igor Ferreira, and the FUBAJAM team for the
-programming and overall support."
+programming and overall support.
+
+Special thannks to Eli Ribeiro and Taina Couto
+for the art support."
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false

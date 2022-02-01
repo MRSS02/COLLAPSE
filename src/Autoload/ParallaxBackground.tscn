@@ -17,7 +17,7 @@ position = Vector2( 0, 360 )
 texture = ExtResource( 2 )
 
 [node name="Moon" type="ParallaxLayer" parent="."]
-motion_scale = Vector2( 0.1, 1 )
+motion_scale = Vector2( 0.1, 0 )
 motion_offset = Vector2( 640, 0 )
 motion_mirroring = Vector2( 1280, 0 )
 script = ExtResource( 1 )
@@ -27,7 +27,7 @@ move_speed = -0.15
 texture = ExtResource( 6 )
 
 [node name="Clouds0" type="ParallaxLayer" parent="."]
-motion_scale = Vector2( 0.4, 1 )
+motion_scale = Vector2( 0.4, 0 )
 motion_mirroring = Vector2( 1280, 0 )
 script = ExtResource( 1 )
 move_speed = -10.0
@@ -36,7 +36,7 @@ move_speed = -10.0
 texture = ExtResource( 4 )
 
 [node name="City" type="ParallaxLayer" parent="."]
-motion_scale = Vector2( 0.3, 1 )
+motion_scale = Vector2( 0.3, 0 )
 motion_offset = Vector2( 640, 0 )
 motion_mirroring = Vector2( 1280, 0 )
 script = ExtResource( 1 )
@@ -47,7 +47,7 @@ texture = ExtResource( 5 )
 
 [node name="Clouds1" type="ParallaxLayer" parent="."]
 position = Vector2( -11, 0 )
-motion_scale = Vector2( 0.8, 1 )
+motion_scale = Vector2( 0.8, 0 )
 motion_offset = Vector2( 640, 0 )
 motion_mirroring = Vector2( 1280, 0 )
 script = ExtResource( 1 )

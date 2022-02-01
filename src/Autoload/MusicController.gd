@@ -1,7 +1,7 @@
 extends Node
 
-var menu_music = preload("res://assets/audio/music/menu.mp3")
-var game_music = preload("res://assets/audio/music/game.wav")
+var menu_music = preload("res://assets/audio/music/menu.ogg")
+var game_music = preload("res://assets/audio/music/game.ogg")
 
 func play_menu_music():
 	$Music.stream = menu_music
