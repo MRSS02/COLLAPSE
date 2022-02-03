@@ -1,5 +1,11 @@
 # COLLAPSE
-Repository for our global game jam 2022, as a part of the FUBAjam 2022 group
+Repository for the game COLLAPSE!, made for global game jam 2022, as a part of the FUBAjam 2022 group
+
+### GAME PAGES
+
+**2022 Global Game Jam game page: https://globalgamejam.org/2022/games/collapse-1**
+**GameJolt Page: https://gamejolt.com/games/COLLAPSE/686621**
+**Itch.io page: https://edwiges.itch.io/collapse**
 
 
 #### Lisencing:
