@@ -12,6 +12,8 @@ This is the repository for the game COLLAPSE!, a game made for Global Game jam 2
 
 **Itch.io page: https://edwiges.itch.io/collapse**
 
+If you want to play this game on browser, you can go to Itch.io or GameJolt page and play from there. 
+
 
 #### Lisencing:
 
