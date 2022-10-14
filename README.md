@@ -15,6 +15,6 @@ This is the repository for the game COLLAPSE!, a game made for Global Game jam 2
 If you want to play this game on browser, you can go to Itch.io or GameJolt page and play from there. 
 
 
-#### Lisencing:
+#### Licensing:
 
 [Attribution-NonCommercial-ShareAlike 4.0 Creative Commons license](https://creativecommons.org/licenses/by-nc-sa/4.0/)
